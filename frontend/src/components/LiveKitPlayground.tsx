@@ -264,7 +264,7 @@ export const LiveKitPlayground: React.FC = () => {
 
     try {
       // Get token from your backend server
-      const response = await fetch(`http://localhost:5013/api/v1/livekit_ms/processor/getToken?name=${encodeURIComponent(username.trim())}&room=${encodeURIComponent(roomName.trim())}&nodeId=default-node`, {
+      const response = await fetch(`https://liveconnect-studio.fly.dev/api/v1/livekit_ms/processor/getToken?name=${encodeURIComponent(username.trim())}&room=${encodeURIComponent(roomName.trim())}&nodeId=default-node`, {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
@@ -517,7 +517,7 @@ export const LiveKitPlayground: React.FC = () => {
       {!isConnected ? (
         <div className="flex items-center justify-center min-h-[600px]">
           <div className="bg-slate-800 rounded-xl p-8 border border-slate-700 max-w-md w-full">
-            <h2 className="text-3xl font-bold text-white mb-8 text-center">LiveKit Agents Playground</h2>
+            <h2 className="text-3xl font-bold text-white mb-8 text-center">LiveConnect Playground</h2>
             
             <div className="space-y-6">
             <div>
